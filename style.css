@@ -37,9 +37,30 @@ body {
 
 @media (max-width: 768px) {
     .animate-typing {
-        white-space: normal; /* Allows text wrapping on mobile */
-        display: inline-block; /* Ensures text doesn't break animation */
-        height: auto; /* Prevents overflow issues */
-        border-right-width: 2px; /* Keeps the blinking effect */
+        white-space: normal;
+        /* Allows text wrapping on mobile */
+        display: inline-block;
+        /* Ensures text doesn't break animation */
+        height: auto;
+        /* Prevents overflow issues */
+        border-right-width: 2px;
+        /* Keeps the blinking effect */
     }
+}
+
+
+@keyframes fadeInProfile {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.profile-img {
+    opacity: 0;
+    animation: fadeInProfile 2s ease-out forwards;
+    /* Adjust this timing to sync with the running lines */
 }
