@@ -1,85 +1,45 @@
 /* Global Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #1e1e2e, #23232f);
+    background: #0a0a0a;
     color: #ffffff;
     margin: 0;
-    padding: 20px;
+    padding: 0;
     text-align: center;
 }
 
-/* Main Container */
-.container {
-    max-width: 800px;
-    margin: auto;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    text-align: left;
-}
-
-/* Headings */
-h1 {
-    color: #4db8ff;
-    font-size: 2.5em;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-h2 {
-    border-bottom: 2px solid #4db8ff;
-    padding-bottom: 5px;
-}
-
-/* Links */
-a {
-    color: #4db8ff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-a:hover {
-    text-decoration: underline;
-    color: #ff4da6;
-}
-
-/* Project List */
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    background: rgba(255, 255, 255, 0.15);
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-ul li:hover {
-    transform: scale(1.05);
-    background: rgba(255, 255, 255, 0.25);
-}
-
-/* Footer */
-footer {
-    margin-top: 20px;
-    font-size: 0.9em;
-    opacity: 0.7;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        width: 90%;
+/* Running Lines Animation */
+@keyframes running-lines {
+    0% {
+        stroke-dasharray: 0, 300;
+        stroke-dashoffset: 0;
+        opacity: 1;
     }
 
-    h1 {
-        font-size: 2em;
+    100% {
+        stroke-dasharray: 300, 0;
+        stroke-dashoffset: -300;
+        opacity: 0;
+    }
+}
+
+.run-line {
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke: #00eaff;
+    /* Brighter neon blue */
+    filter: drop-shadow(0px 0px 4px #00eaff);
+    /* Adds a glowing effect */
+    stroke-dasharray: 0, 300;
+    stroke-dashoffset: 0;
+    animation: running-lines 5s infinite linear;
+}
+
+@media (max-width: 768px) {
+    .animate-typing {
+        white-space: normal; /* Allows text wrapping on mobile */
+        display: inline-block; /* Ensures text doesn't break animation */
+        height: auto; /* Prevents overflow issues */
+        border-right-width: 2px; /* Keeps the blinking effect */
     }
 }
