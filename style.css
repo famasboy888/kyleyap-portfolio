@@ -1,52 +1,85 @@
-/* General Styling */
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f8f9fa;
-    color: #333;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e1e2e, #23232f);
+    color: #ffffff;
+    margin: 0;
     padding: 20px;
+    text-align: center;
 }
 
+/* Main Container */
 .container {
     max-width: 800px;
     margin: auto;
-    background: white;
+    background: rgba(255, 255, 255, 0.1);
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     text-align: left;
 }
 
 /* Headings */
 h1 {
-    color: #007bff;
+    color: #4db8ff;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 h2 {
-    border-bottom: 2px solid #007bff;
+    border-bottom: 2px solid #4db8ff;
     padding-bottom: 5px;
 }
 
 /* Links */
 a {
-    color: #007bff;
+    color: #4db8ff;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 a:hover {
     text-decoration: underline;
+    color: #ff4da6;
 }
 
-/* List Styling */
+/* Project List */
 ul {
     list-style: none;
     padding: 0;
 }
 
 ul li {
-    background: #e9ecef;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+ul li:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    font-size: 0.9em;
+    opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
 }
